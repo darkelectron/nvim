@@ -1,0 +1,11 @@
+" In your init.lua or init.vim
+" set termguicolors
+lua << EOF
+require("bufferline").setup{
+  options = {
+    separator_style = "slant",
+    numbers = "ordinal"
+  }
+}
+EOF
+
