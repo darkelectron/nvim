@@ -68,6 +68,8 @@ local function modified()
   return ''
 end
 
+vim.opt.laststatus = 3
+
 require('lualine').setup {
   options = {
     theme = theme,
@@ -122,3 +124,5 @@ require('lualine').setup {
     lualine_x = {},
   },
 }
+
+vim.opt.laststatus = 3
