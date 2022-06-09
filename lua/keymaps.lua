@@ -80,3 +80,5 @@ keymap("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", opts)
 -- " nmap <C-s> <Plug>MarkdownPreview
 -- " nmap <M-s> <Plug>MarkdownPreviewStop
 -- " nmap <leader>mm <Plug>MarkdownPreviewToggle
+--
+keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
