@@ -2,8 +2,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
   callback = function()
     vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      set nobuflisted
     ]]
   end,
 })
@@ -13,6 +13,24 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "python" },
+  callback = function ()
+    vim.cmd [[
+      setlocal tabstop=4
+    ]]
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  callback = function ()
+    vim.cmd [[
+      :%s/\s\+$//e
+    ]]
   end,
 })
 -- Automatically close tab/vim when nvim-tree is the last window in the tab
