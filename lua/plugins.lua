@@ -41,6 +41,7 @@ return packer.startup(function(use)
   }
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-tree.lua"
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -53,28 +54,34 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+	-- LSP
+	use { "neovim/nvim-lspconfig"} -- enable LSP
+  use { "williamboman/mason.nvim"} -- simple to use language server installer
+  use { "williamboman/mason-lspconfig.nvim"}
+	use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
+  use { "RRethy/vim-illuminate"}
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  -- use "nvim-telescope/telescope.nvim"
+  use({
+    "nvim-telescope/telescope.nvim",
+    requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+})
 
   -- Treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+    "nvim-treesitter/nvim-treesitter"
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- others
+  -- Others
   use 'ethanholz/nvim-lastplace'
-  use 'kdheepak/lazygit.nvim'
   use 'liuchengxu/vista.vim'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
@@ -82,10 +89,18 @@ return packer.startup(function(use)
   use 'lervag/vimtex'
   use 'vimwiki/vimwiki'
   use 'unblevable/quick-scope'
-  use 'RRethy/vim-illuminate'
-  -- use 'itchyny/lightline.vim'
+  use 'thesis/vim-solidity'
+
 -- Plugins can have post-install/update hooks
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown", "vimwiki" } end, ft = { "markdown", "vimwiki" }, })
+  use {"ellisonleao/glow.nvim"}
+  -- use {
+  --     'glacambre/firenvim',
+  --     run = function() vim.fn['firenvim#install'](0) end
+  -- }
+  -- use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+  --   require("toggleterm").setup()
+  -- end}
   -- use "akinsho/bufferline.nvim"
   -- use {
   --   'romgrk/barbar.nvim',

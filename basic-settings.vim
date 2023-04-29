@@ -39,3 +39,5 @@ set fillchars=fold:.
 highlight Folded guibg=grey ctermbg=NONE guifg=blue ctermfg=NONE term=bold
 highlight FoldColumn guibg=darkgrey guifg=white ctermbg=NONE ctermfg=NONE term=bold
 hi link illuminatedWord Visual
+
+let g:vimwiki_global_ext = 0

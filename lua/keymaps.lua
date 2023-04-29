@@ -1,9 +1,7 @@
-local opts = { noremap = true, silent = true }
-
--- local term_opts = { silent = true }
-
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
+
+local opts = { silent = true }
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -31,6 +29,7 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- Change to directory
 keymap("n", "<leader>d", ":tcd %:h<CR>", opts)
 
 -- Navigate buffers
@@ -73,6 +72,12 @@ keymap("n", "<leader>tG", ":Telescope live_grep<cr>", opts)
 -- Vista
 keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
 
+-- LazyGit
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+
+-- Comment
+keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
+keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
 keymap("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", opts)
 -- keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
