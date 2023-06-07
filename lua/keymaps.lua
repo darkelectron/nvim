@@ -69,8 +69,8 @@ keymap("n", "<leader>tt", ":Telescope treesitter<cr>", opts)
 keymap("n", "<leader>tg", ":Telescope grep_string<cr>", opts)
 keymap("n", "<leader>tG", ":Telescope live_grep<cr>", opts)
 
--- Vista
-keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
+-- SymbolsOutline
+keymap("n", "<F8>", ":SymbolsOutline<cr>", opts)
 
 -- LazyGit
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -83,8 +83,6 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 keymap("n", "<leader>L", ":Lazy<cr>", opts)
 
 keymap("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", opts)
--- keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
--- keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
 -- " nmap <C-s> <Plug>MarkdownPreview
 -- " nmap <M-s> <Plug>MarkdownPreviewStop
 -- " nmap <leader>mm <Plug>MarkdownPreviewToggle

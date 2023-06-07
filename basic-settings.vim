@@ -21,9 +21,6 @@ hi CursorLine term=bold cterm=bold guibg=NONE
 hi Normal term=NONE guibg=NONE ctermbg=NONE
 hi SignColumn term=NONE cterm=NONE guibg=NONE ctermbg=NONE
 
-" nmap <F8> :TagbarToggle<CR>
-nmap <F8> :Vista!!<CR>
-
 map <F5> :setlocal spell!<CR>
 highlight VertSplit cterm=NONE
 " folds
