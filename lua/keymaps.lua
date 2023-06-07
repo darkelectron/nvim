@@ -79,6 +79,9 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
+-- Lazy
+keymap("n", "<leader>L", ":Lazy<cr>", opts)
+
 keymap("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", opts)
 -- keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
 -- keymap("n", "<leader>F8", ":Vista!!<cr>", opts)
