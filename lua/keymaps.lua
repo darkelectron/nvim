@@ -68,6 +68,7 @@ keymap("n", "<leader>T", ":Telescope<cr>", opts)
 keymap("n", "<leader>tt", ":Telescope treesitter<cr>", opts)
 keymap("n", "<leader>tg", ":Telescope grep_string<cr>", opts)
 keymap("n", "<leader>tG", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>zz", ":Telescope spell_suggest<cr>", opts)
 
 -- SymbolsOutline
 keymap("n", "<F8>", ":SymbolsOutline<cr>", opts)
@@ -87,4 +88,8 @@ keymap("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", opts)
 -- " nmap <M-s> <Plug>MarkdownPreviewStop
 -- " nmap <leader>mm <Plug>MarkdownPreviewToggle
 --
+-- Alpha
+keymap("n", "<leader>a", ":Alpha<cr>", opts)
+
+-- remove search highlighting
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
