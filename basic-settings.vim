@@ -21,6 +21,10 @@ hi CursorLine term=bold cterm=bold guibg=NONE
 hi Normal term=NONE guibg=NONE ctermbg=NONE
 hi SignColumn term=NONE cterm=NONE guibg=NONE ctermbg=NONE
 
+hi TabLine cterm=NONE ctermbg=242 ctermfg=0
+hi TabLineSel cterm=NONE ctermbg=NONE ctermfg=white
+hi TabLineFill cterm=NONE ctermbg=0 ctermfg=242
+
 map <F5> :setlocal spell!<CR>
 highlight VertSplit cterm=NONE
 " folds
