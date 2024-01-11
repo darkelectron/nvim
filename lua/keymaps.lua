@@ -93,3 +93,8 @@ keymap("n", "<leader>a", ":Alpha<cr>", opts)
 
 -- remove search highlighting
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
+
+-- tabs and panes
+keymap("n", "<leader>pp", ":tabnew<cr>", opts)
+keymap("n", "<leader>pv", ":vsp<cr>", opts)
+keymap("n", "<leader>ps", ":sp<cr>", opts)

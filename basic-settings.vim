@@ -3,6 +3,8 @@
 
 " nnoremap <leader>d :tcd %:h<CR>
 
+" set termguicolors
+" colorscheme tokyonight-moon
 syntax on
 
 " autocompletion
@@ -39,6 +41,5 @@ highlight VertSplit cterm=NONE
 
 highlight Folded guibg=grey ctermbg=NONE guifg=blue ctermfg=NONE term=bold
 highlight FoldColumn guibg=darkgrey guifg=white ctermbg=NONE ctermfg=NONE term=bold
-hi link illuminatedWord Visual
 
 let g:vimwiki_global_ext = 0

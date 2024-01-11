@@ -1,11 +1,9 @@
 local M = {
   "neovim/nvim-lspconfig",
-  commit = "649137cbc53a044bffde36294ce3160cb18f32c7",
   lazy = true,
   dependencies = {
     {
       "hrsh7th/cmp-nvim-lsp",
-      commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef",
     },
   },
 }
@@ -26,7 +24,7 @@ function M.config()
     keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
     keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
     keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-    keymap(bufnr, "n", "<leader>lI", "<cmd>Mason<cr>", opts)
+    keymap(bufnr, "n", "<leader>M", "<cmd>Mason<cr>", opts)
     keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
     keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
     keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
