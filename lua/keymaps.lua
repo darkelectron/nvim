@@ -98,3 +98,15 @@ keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<leader>pp", ":tabnew<cr>", opts)
 keymap("n", "<leader>pv", ":vsp<cr>", opts)
 keymap("n", "<leader>ps", ":sp<cr>", opts)
+
+-- flutter-tools
+--  " Show hover
+-- nnoremap K <Cmd>lua vim.lsp.buf.hover()<CR>
+--  " Jump to definition
+-- nnoremap gd <Cmd>lua vim.lsp.buf.definition()<CR>
+--  " Open code actions using the default lsp UI, if you want to change this please see the plugins above
+-- nnoremap <leader>ca <Cmd>lua vim.lsp.buf.code_action()<CR>
+--  " Open code actions for the selected visual range
+-- xnoremap <leader>ca <Cmd>lua vim.lsp.buf.range_code_action()<CR>
+keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
