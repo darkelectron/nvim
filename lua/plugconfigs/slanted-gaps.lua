@@ -73,8 +73,22 @@ vim.opt.laststatus = 3
 require('lualine').setup {
   options = {
     theme = theme,
-    component_separators = '',
+    component_separators = {left = '\\', right = '/'},
     section_separators = { left = '', right = '' },
+  },
+  tabline = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {
+      {
+        'tabs',
+        mode = 1,
+        use_mode_colors = true,
+      },
+    },
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
   },
   sections = process_sections {
     lualine_a = { 'mode' },
@@ -124,5 +138,3 @@ require('lualine').setup {
     lualine_x = {},
   },
 }
-
-vim.opt.laststatus = 3
