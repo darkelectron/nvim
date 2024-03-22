@@ -77,15 +77,15 @@ require('lualine').setup {
     section_separators = { left = '', right = '' },
   },
   tabline = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {
+    lualine_a = {
       {
         'tabs',
         mode = 1,
         use_mode_colors = true,
       },
     },
+    lualine_b = {},
+    lualine_c = {},
     lualine_x = {},
     lualine_y = {},
     lualine_z = {},
