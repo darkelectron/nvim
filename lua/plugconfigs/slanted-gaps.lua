@@ -86,7 +86,11 @@ require('lualine').setup {
     },
     lualine_b = {},
     lualine_c = {},
-    lualine_x = {},
+    lualine_x = {
+      {
+        'buffers',
+      },
+    },
     lualine_y = {},
     lualine_z = {},
   },
