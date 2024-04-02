@@ -2,9 +2,10 @@
 
 local opts = {
   filetypes = {
-    "*",
-    -- Excluded filteypes.
-    "!lazy", -- Commit hashes get highlighted sometimes.
+    -- "*",
+    -- -- Excluded filteypes.
+    -- "!lazy", -- Commit hashes get highlighted sometimes.
+    "dart"
   },
   user_default_options = {
     RGB = true, -- #RGB hex codes.
