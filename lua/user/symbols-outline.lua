@@ -1,6 +1,10 @@
 local M = {
   "simrat39/symbols-outline.nvim",
-  event = "BufReadPre",
+  keys = {
+    {
+      "<F8>", ":SymbolsOutline<cr>", desc = "load symbols"
+    }
+  }
 }
 
 M.opts = {
