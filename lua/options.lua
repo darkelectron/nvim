@@ -20,6 +20,7 @@ local options = {
   tabstop = 2,
   smarttab = true,
   cindent = true,
+  textwidth = 120,
   -- splitting
   splitbelow = true,
   splitright = true,
@@ -47,7 +48,7 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+-- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- cursor
 vim.cmd "set guicursor="

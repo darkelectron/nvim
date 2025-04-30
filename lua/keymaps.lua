@@ -121,3 +121,20 @@ keymap("n", "<leader>vdi", ":VimwikiDiaryIndex<cr>", opts)
 keymap("n", "<leader>vdg", ":VimwikiDiaryGenerateLinks<cr>", opts)
 keymap("n", "<leader>vg", ":VimwikiGenerateTagLinks<cr>", opts)
 keymap("n", "<leader>vr", ":VimwikiRebuildTags<cr>", opts)
+
+-- gitsigns
+keymap("n", "<leader>G", ":Gitsigns<cr>", opts)
+
+-- codecompanion
+ -- vim.api.nvim_set_keymap('i', '<C-l>', '<cmd>CodeCompanionAccept<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('i', '<C-x>', '<cmd>CodeCompanionDismiss<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('i', '<C-j>', '<cmd>CodeCompanionNext<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('i', '<C-k>', '<cmd>CodeCompanionPrev<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('n', '<C-c>', '<cmd>CodeCompanionChat<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('n', '<C-q>', '<cmd>CodeCompanionCloseChat<CR>', { noremap = true, silent = true })
+ --    vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>CodeCompanionActions<CR>', { noremap = true, silent = true })
+ --  end,o
+-- keymap("i", "<C-l>", "<C-o>:CodeCompanion<CR>", opts)
+keymap("n", "<leader>cc", ":CodeCompanion<CR>", opts)
+keymap("v", "<leader>cc", ":CodeCompanion<CR>", opts)
+keymap("n", "<leader>ca", "<cmd>CodeCompanionActions<CR>", { noremap = true, silent = true })

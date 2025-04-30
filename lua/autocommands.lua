@@ -113,3 +113,9 @@ vim.api.nvim_create_autocmd('ModeChanged', {
     end
   end
 })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function ()
+    vim.bo.formatexpr = nil
+  end
+})

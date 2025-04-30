@@ -1,7 +1,7 @@
 local opts = {
   settings = {
     ltex = {
-      enabled = {"latex", "tex", "bib", "md"},
+      enabled = {"latex", "tex", "bib"},
       language = {"en-GB", "en-US"},
       clearDiagnosticsWhenClosingFile = false,
       checkFrequency = "save",

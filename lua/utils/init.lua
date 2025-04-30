@@ -2,9 +2,11 @@ local M = {}
 
 M.servers = {
   "lua_ls",
-  "cssls",
+  -- "cssmodules_ls",
+  "stylelint_lsp",
+  -- "css_variables",
   "html",
-  "tsserver",
+  "ts_ls",
   "pyright",
   "bashls",
   "jsonls",
